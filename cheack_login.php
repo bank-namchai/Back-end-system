@@ -34,14 +34,8 @@ session_start();
                                       if($row['m_level']=="admin"){                                     
                                           Header("Location: admin/");
                                           
-                                      }elseif($row['m_level']=="Authorities"){
-                                          Header("Location: authorities/");
-                                      }elseif($row['m_level']=="Commission"){
-                                          Header("Location: commission/");
-                                      }elseif($row['m_level']=="Executive"){
-                                          Header("Location: executive/");
-                                      }elseif($row['m_level']=="DeputyExecutive"){
-                                          Header("Location: DeputyExecutive/");
+                                      }elseif($row['m_level']=="member"){
+                                          Header("Location: member/");
                                       }
                                 
                                  

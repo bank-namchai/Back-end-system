@@ -33,6 +33,7 @@ $row = mysqli_fetch_array($result);
       </select>
     </div>
   </div>
+  
   <div class="form-group">
     <div class="col-sm-2 control-label">
       Username :
@@ -41,6 +42,7 @@ $row = mysqli_fetch_array($result);
       <input type="text" name="m_user" required class="form-control" autocomplete="off" pattern="^[a-zA-Z0-9]+$" title="ภาษาอังกฤษหรือตัวเลขเท่านั้น" minlength="2" value="<?php echo $row['m_user'];?>">
     </div>
   </div>
+  
   <div class="form-group">
     <div class="col-sm-2 control-label">
       ชื่อ-นามสกุล :
@@ -57,6 +59,7 @@ $row = mysqli_fetch_array($result);
       <input type="text" name="m_tel" required class="form-control" value="<?php echo $row['m_tel'];?>">
     </div>
   </div>
+
    <div class="form-group">
     <div class="col-sm-2 control-label">
       อีเมล์ :
@@ -65,6 +68,16 @@ $row = mysqli_fetch_array($result);
       <input type="email" name="m_email" required class="form-control" value="<?php echo $row['m_email'];?>">
     </div>
   </div>
+
+  <div class="form-group">
+    <div class="col-sm-2 control-label">
+    Line id :
+    </div>
+    <div class="col-sm-3">
+      <input type="lineid" name="lineid" required class="form-control" value="<?php echo $row['lineid'];?>">
+    </div>
+  </div>
+
     <div class="form-group">
     <div class="col-sm-2 control-label">
       ที่อยู่ :

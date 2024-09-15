@@ -9,15 +9,16 @@ include('../condb.php');
 if($_SESSION['m_level']!='admin'){
 	Header("Location: index.php");
 }
+
 	$member_id = mysqli_real_escape_string($con,$_POST["member_id"]);
-	$m_level = mysqli_real_escape_string($con,$_POST["m_level"]);
-	$m_user = mysqli_real_escape_string($con,$_POST["m_user"]);
 	$m_name = mysqli_real_escape_string($con,$_POST["m_name"]);
-	$m_tel = mysqli_real_escape_string($con,$_POST["m_tel"]);
 	$m_email = mysqli_real_escape_string($con,$_POST["m_email"]);
 	$lineid = mysqli_real_escape_string($con,$_POST["lineid"]);
-	$m_address = mysqli_real_escape_string($con,$_POST["m_address"]);	
+	$m_tel = mysqli_real_escape_string($con,$_POST["m_tel"]);
+	$m_address = mysqli_real_escape_string($con,$_POST["m_address"]);		
 	$m_img2 = mysqli_real_escape_string($con,$_POST["m_img2"]);
+
+
 
 
 	$date1 = date("Ymd_His");
@@ -35,14 +36,12 @@ if($_SESSION['m_level']!='admin'){
 	}else{
 		$newname=$m_img2;
 	}
-
+	
 	$sql = "UPDATE tbl_member SET 
-	m_level='$m_level',
-	m_user='$m_user',
 	m_name='$m_name',
-	m_tel='$m_tel',
 	m_email='$m_email',
 	lineid='$lineid',
+	m_tel='$m_tel',
 	m_address='$m_address',
 	m_img='$newname'
 	WHERE member_id=$member_id
@@ -52,12 +51,13 @@ if($_SESSION['m_level']!='admin'){
 	mysqli_close($con);
 	
 	if($result){
-	echo '<script>';
-    echo "window.location='member.php?do=finish';";
-    echo '</script>';
-	}else{
-	echo '<script>';
-    echo "window.location='member.php?act=add&do=f';";
-    echo '</script>';
-}
+		echo '<script>';
+		echo "alert('แก้ไขข้อมูลโปรไฟล์สำเร็จ');";
+		echo "window.location='index.php';";
+		echo '</script>';
+		}else{
+		echo '<script>';
+		echo "window.location='index.php';";
+		echo '</script>';
+			}
 ?>

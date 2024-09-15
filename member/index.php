@@ -1,10 +1,10 @@
 <?php
 include('h.php');
-include("condb.php");
+include("../condb.php");
 ?>
 <!DOCTYPE html>
 <head>
-  <?php include('boot4.php');?>
+  <?php include('../boot4.php');?>
 </head>
 <body>
 <?php
@@ -18,18 +18,18 @@ include("condb.php");
       <div class="col-md-12" style="margin-top: 10px">
         <div class="row">
             <?php
-            $act = (isset($_GET['act']) ? $_GET['act'] : '');
-            //  $q = $_GET['q'];
+           $act = (isset($_GET['act']) ? $_GET['act'] : '');
+            // $q = $_GET['q'];
             // if($act=='showbytype'){
             // include('list_prd_by_type.php');
             // }else 
             // โค้ดส่วนนี้ไม่ใช้เพราะทำต่อไม่เป็น
             // if($q!=''){
             // include("show_product_q.php");
-            // }else 
-            
-            if($act=='add'){
-            include("member_form_add.php");
+            // }else
+
+             if($act=='add'){
+            include("แก้ไขโปรไฟล์.php");
             }else{
             include('show_product.php');
             }
@@ -40,4 +40,4 @@ include("condb.php");
     </div>
 </body>
 </html>
-<?php include('script4.php');?>
+<?php include('script4.php');?> 

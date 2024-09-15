@@ -10,8 +10,11 @@
     <div class="content-wrapper">
       <section class="content-header">
       <h1>
-        <i class="glyphicon glyphicon-user hidden-xs"></i> <span class="hidden-xs">ข้อมูลบุคคลในระบบ</span>
-        <a href="member.php?act=add" class="btn btn-primary btn-sm">เพิ่มผู้ใช้งาน</a>
+       
+        <i class="fa fa-home"></i>
+        <span class="hidden-xs">หน้าหลัก การชำระเงิน</span>
+    
+        <!-- <a href="member.php?act=add" class="btn btn-primary btn-sm">เพิ่มผู้ใช้งาน</a> -->
         </h1>
         
       </section>
@@ -33,7 +36,7 @@
                   }elseif($act=='view'){
                   include('member_form_view.php');
                   }else {
-                  include('member_list.php');
+                  include('หน้าการชำระเงิน.php');
                   }
                   ?>                   
                   </div>

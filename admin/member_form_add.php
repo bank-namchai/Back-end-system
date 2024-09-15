@@ -63,6 +63,7 @@
       <input type="text" name="m_name" required class="form-control">
     </div>
   </div>
+
   <div class="form-group">
     <div class="col-sm-2 control-label">
       เบอร์โทร :
@@ -71,6 +72,7 @@
       <input type="text" name="m_tel" required class="form-control">
     </div>
   </div>
+
   <div class="form-group">
     <div class="col-sm-2 control-label">
       อีเมล์ :
@@ -78,7 +80,18 @@
     <div class="col-sm-3">
       <input type="email" name="m_email" required class="form-control">
     </div>
+    </div>
+  
+  <div class="form-group">
+    <div class="col-sm-2 control-label">
+    Line id :
+    </div>
+    <div class="col-sm-3">
+      <input type="lineid" name="lineid" required class="form-control" >
+    </div>
   </div>
+
+  
     <div class="form-group">
     <div class="col-sm-2 control-label">
       ที่อยู่ :
@@ -96,6 +109,8 @@
       <img id="blah" src="#" alt="" width="250" class="img-rounded"/ style="margin-top: 10px;">
     </div>
   </div>
+
+  
   <div class="form-group">
     <div class="col-sm-2">
     </div>

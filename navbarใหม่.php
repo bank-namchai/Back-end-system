@@ -55,7 +55,7 @@
         </span>
       </a>
         
-      <a href="รายยอดขายสินค้า.php"><i class="glyphicon glyphicon-record"></i>
+      <a href="member_profile.php"><i class="glyphicon glyphicon-record"></i>
           <span> รายยอดขายสินค้า  ตัวอย่าง </span>
         </a>
       </li>
