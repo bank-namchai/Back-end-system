@@ -26,18 +26,12 @@
                 <div class="col-sm-12">
                   <div class="box-body">
                     <?php
-                  $act = (isset($_GET['act']) ? $_GET['act'] : '');
-                  if($act == 'add'){
-                  include('member_form_add.php');
-                  }elseif ($act == 'edit') {
-                  include('member_form_edit.php');
-                  }elseif($act=='rwd'){
-                  include('member_form_rwd.php');
-                  }elseif($act=='view'){
-                  include('member_form_view.php');
-                  }else {
+                 
+                
+
                   include('หน้าการชำระเงิน.php');
-                  }
+                
+
                   ?>                   
                   </div>
                 </div>

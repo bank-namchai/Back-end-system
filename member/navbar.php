@@ -31,12 +31,23 @@ $totalRows_typeprd = mysqli_num_rows($typeprd);
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
+
             &nbsp;
             <div class="btn-group">
               <a class="btn btn-Light" href="index.php?act=add" role="button">แก้ไขโปรไฟล์</a>
             </div>
             &nbsp;
+
+            <!-- ส่วนที่แก้ไขเพิ่มปุ่มตะกร้าสินค้า -->
+              <!-- แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข
+              แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข
+              แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข -->
+            <a class="btn btn-Light" href="cart.php?act=add" role="button">ตะกร้าสินค้า</a>
             
+            <!-- แก้ไข  แก้ไข  แก้ไข  แก้ไข -->
+
+
+
             <?php
             if ($member_id!='') {
             

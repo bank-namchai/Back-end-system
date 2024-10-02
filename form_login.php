@@ -46,11 +46,13 @@
 												<input type="checkbox" checked>
 												<span class="checkmark"></span>
 											</label>
+
 										</div>
 										<div class="w-50 text-md-right">
 											<a href="#">Forgot Password</a>
 										</div>
 									</div>
+									
 									<div class="form-group">
 										<button type="submit" class="btn btn-primary rounded submit p-3 px-5">เข้าสู่ระบบ</button>
 									</div>

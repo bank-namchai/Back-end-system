@@ -109,7 +109,7 @@ $result2 = mysqli_query($con, $query2);
     </div>
     <div class="col-sm-3">
       <button type="submit" class="btn btn-success">เพิ่มข้อมูล</button>
-      <a href="durable.php" class="btn btn-danger">ยกเลิก</a>
+      <a href="product.php" class="btn btn-danger">ยกเลิก</a>
     </div>
   </div>
 </form>

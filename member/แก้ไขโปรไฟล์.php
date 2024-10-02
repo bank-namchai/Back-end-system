@@ -11,6 +11,7 @@ $sql = "SELECT * FROM tbl_member WHERE member_id=$member_id";
 $result = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error());
 $row = mysqli_fetch_array($result);
 ?>
+
 <script type="text/javascript">
         function readURL(input) {
             if (input.files && input.files[0]) {
@@ -24,6 +25,7 @@ $row = mysqli_fetch_array($result);
             }
         }
 </script>
+
 <form action="ไฟล์การแก้ไขโปรไฟล์.php" method="post" class="form-horizontal" enctype="multipart/form-data">
 
 

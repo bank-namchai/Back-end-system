@@ -5,6 +5,9 @@ include("../condb.php");
 <!DOCTYPE html>
 <head>
   <?php include('../boot4.php');?>
+  
+ 
+
 </head>
 <body>
 <?php
@@ -13,6 +16,10 @@ include("../condb.php");
  <?php
   include('navbar.php');
   ?>
+
+ 
+
+
   <div class="container">
     <div class="row">
       <div class="col-md-12" style="margin-top: 10px">

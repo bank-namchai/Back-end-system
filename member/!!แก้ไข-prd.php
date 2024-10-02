@@ -39,6 +39,8 @@ $p_id = $_GET["id"];
       $result = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error());
       $row = mysqli_fetch_array($result);
 
+
+
       $sql_last_view = "SELECT p_view FROM tbl_product Where p_id = '".$p_id."'";
             $resalt_last_view = mysqli_query($con, $sql_last_view) or die ("Error in query: $sql_last_view " . mysqli_error());
             $row_last_view = mysqli_fetch_assoc($resalt_last_view);
@@ -70,12 +72,25 @@ $p_id = $_GET["id"];
                 ราคา : <font color="red"> <?php echo $row["p_price"];?> </font> บาท  <br>
                  <b>คงเหลือ :</b> <?php echo $row["p_qty"];?> <?php echo $row["p_unit"];?>
               </p>
+
+
               <?php echo $row["p_detail"];?>
               <!-- <br> จำนวนการเข้าชม  <?php echo $row["p_view"];?> ครั้ง -->
                  <p> <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5500ee80057fdb99"></script>
                 <div class="addthis_inline_share_toolbox_sf2w"></div>
+
+                    <!-- ปุ่มเพิ่มสินค้าลงตระกร้าสั่งซื้อ -->
+                         <!-- แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข
+              แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข
+              แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข -->
+
+                <a class="btn btn-outline-success mt-3 "  href="order.php?id=<?=$row['p_id']?>"   >เพิ่มสินค้าลงตะกร้าการสั่งซื้อ</a> 
+      <!-- แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข
+              แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข
+              แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข  แก้ไข -->
               </p>
             </div>
+            
           </div>
         </div>
       </div>
