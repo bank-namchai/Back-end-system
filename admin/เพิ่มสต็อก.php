@@ -1,4 +1,7 @@
 <?php include('h.php');?>
+
+
+
 <body class="hold-transition skin-purple sidebar-mini">
   <div class="wrapper">
     <!-- Main Header -->
@@ -9,14 +12,15 @@
       
     <div class="content-wrapper">
       <section class="content-header">
-        
+
+      
       <h1>
-       
-        <i class="fa fa-home"></i>
-        <span class="hidden-xs">หน้าหลัก การชำระเงิน</span>
-    
+      <i class="fa fa-home"></i> <span class="hidden-xs">เพิ่มสต็อก</span>
+      
         </h1>
-        
+
+            
+
       </section>
       <section class="content">
         <div class="row">
@@ -25,14 +29,13 @@
               <div class="row">
                 <div class="col-sm-12">
                   <div class="box-body">
-                    <?php
-                 
-                
+                    
+                  <div class="col-md-12"  align="center" >
+        	<img src="../icon/เพิ่มสต็อก.png" width="1000px" height="600px">
+            <!-- size 980 x 200px  -->
+                        </div>
 
-                  include('หน้าการชำระเงิน.php');
-                
 
-                  ?>                   
                   </div>
                 </div>
               </div>

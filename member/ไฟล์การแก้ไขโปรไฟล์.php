@@ -7,7 +7,7 @@ include('../condb.php');
 // echo "</pre>";
 // exit();
 if($_SESSION['m_level']!='admin'){
-	Header("Location: index.php");
+
 }
 
 	$member_id = mysqli_real_escape_string($con,$_POST["member_id"]);
@@ -50,14 +50,14 @@ if($_SESSION['m_level']!='admin'){
 	$result = mysqli_query($con, $sql) or die ("Error in query: $sql " . mysqli_error());
 	mysqli_close($con);
 	
+
+	
+
 	if($result){
-		echo '<script>';
-		echo "alert('แก้ไขข้อมูลโปรไฟล์สำเร็จ');";
-		echo "window.location='index.php';";
-		echo '</script>';
-		}else{
-		echo '<script>';
-		echo "window.location='index.php';";
-		echo '</script>';
-			}
+		echo " <script> alert('แก้ไขข้อมูลโปรไฟล์สำเร็จ'); </script> ";
+		echo " <script> window.location ='index.php'; </script> ";
+	
+	
+		}
+		
 ?>

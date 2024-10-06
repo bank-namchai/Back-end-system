@@ -1,13 +1,15 @@
 <?php
-session_start();
+
+include('h.php');
 include("../condb.php");
  
 $cusName = $_POST['m_name'];
 $cusAddress =  $_POST['m_address'];
 $cusTel = $_POST['m_tel'];
+$id=$row['member_id'];
 
-$sql = "insert into tb_order(cus_name,address,telephone,total_price,order_status)
-values('$cusName','$cusAddress ','$cusTel','" . $_SESSION["sum_price"] . "','1')";
+$sql = "insert into tb_order( cus_id,cus_name,address,telephone,total_price,order_status)
+values('$id','$cusName','$cusAddress ','$cusTel','" . $_SESSION["sum_price"] . "','1')";
 mysqli_query($con,$sql);
 
 $orderID = mysqli_insert_id($con);
@@ -36,7 +38,7 @@ for ($i=0; $i <= ( int)$_SESSION["intLine"]; $i++ ) {
                         where p_id ='" . $_SESSION["strProductID"][$i] ."' ";
                         mysqli_query($con,$sql3);
                             
-                        echo "<script>  alert('ยืนยันการสั่งซื้อสำเร็จ') </script> ";
+                      
                         echo "<script> window.location='print_order.php'; </script> ";
 
 

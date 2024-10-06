@@ -12,10 +12,27 @@
         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
       </div>
     </div>
+
     <ul class="sidebar-menu" data-widget="tree">
         <li>
         <a href="index.php"><i class="fa fa-home"></i>
           <span> หน้าหลัก </span>
+        </a>
+      </li>
+
+    
+
+     
+
+      <li>
+        <a href="แจ้งสถานะการชำระเงิน.php">
+          <span> แจ้งสถานะการชำระเงิน </span>
+        </a>
+      </li>
+
+      <li>
+        <a href="เพิ่มสต็อก.php">
+          <span> เพิ่มสต็อก </span>
         </a>
       </li>
 
@@ -35,6 +52,7 @@
           <span> จัดการสมาชิก</span>
         </a>
       </li>
+
       <li>
         <a href="type.php"><i class="glyphicon glyphicon-record"></i>
           <span> จัดการประเภท </span>

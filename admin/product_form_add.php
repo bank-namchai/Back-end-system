@@ -15,6 +15,7 @@ $result2 = mysqli_query($con, $query2);
             }
         }
 </script>
+
 <?php 
  if(@$_GET['do']=='f'){
             echo '<script type="text/javascript">
@@ -95,15 +96,18 @@ $result2 = mysqli_query($con, $query2);
       </select>
     </div>
   </div>
+  
   <div class="form-group">
     <div class="col-sm-2 control-label">
       รูปภาพสินค้า :
     </div>
     <div class="col-sm-4">
       <input type="file" name="p_img" required class="form-control" accept="image/*" onchange="readURL(this);"/>
-      <img id="blah" src="#" alt="" width="250" class="img-rounded"/ style="margin-top: 10px;">
+      <img id="blah"  width="250" class="img-rounded"/ style="margin-top: 10px;">
     </div>
   </div>
+
+
   <div class="form-group">
     <div class="col-sm-2">
     </div>

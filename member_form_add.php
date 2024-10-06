@@ -21,6 +21,7 @@
       <input  name="m_pass" type="password" required class="form-control" id="m_pass"/>
     </div>
   </div>
+  
   <div class="form-group">
     <div class="col-sm-2" align=""> ชื่อ-สกุล :</div>
     <div class="col-sm-7" align="left">

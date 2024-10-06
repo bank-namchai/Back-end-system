@@ -23,10 +23,10 @@
                 <div class="col-sm-12">
                   <div class="box-body">
 
-                  เดี๋ยวมาทำจ้าา
-                    <!-- <?php                 
-                  include('member_profile_edit.php');
-                  ?>                    -->
+                  <div class="col-md-12"  align="center" >
+        	<img src="../icon/รายงานยอดขาย.png" width="1000px" height="600px">
+            <!-- size 980 x 200px  -->
+                        </div>
                   </div>
                 </div>
               </div>

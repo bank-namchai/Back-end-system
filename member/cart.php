@@ -4,6 +4,7 @@
 include('h.php');
 include("../condb.php");
 
+
 ?> 
  
  
@@ -17,6 +18,16 @@ include("../condb.php");
 
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" > 
      <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+     <style>
+    .my-div {
+        float: right;
+    }
+</style>
+
+<div class="my-div"></div>
+
+
  
 </head>
 
@@ -28,6 +39,15 @@ include("../condb.php");
  include('banner.php');
   include('navbar.php');
   ?>
+ 
+
+
+
+
+
+
+
+
 
    <br>
    </br>
@@ -63,6 +83,7 @@ include("../condb.php");
               $Total = 0;
               $sumPrice=0;
               $m= 1 ;
+              $sumTotal=0;
 
               if(isset($_SESSION["intLine"])) {   // ถ้าว่างให้ทำงานใน {}
                for ($i=0; $i <= ( int)$_SESSION["intLine"]; $i++ ) {
@@ -70,12 +91,16 @@ include("../condb.php");
                         $sql1=" SELECT * FROM  tbl_product  WHERE p_id = '" . $_SESSION["strProductID"][$i] . "'    ";
                         $result1 = mysqli_query($con,$sql1);
                         $row_pro = mysqli_fetch_array($result1);
+                        $p_qty =  $row_pro['p_qty'];
+                       
+                       
 
                         $_SESSION["price"] = $row_pro['p_price'];
                         $Total = $_SESSION["strQty"][$i];
                         $sum = $Total * $row_pro['p_price'] ;
                         $sumPrice =  $sumPrice + $sum;
                         $_SESSION["sum_price"] = $sumPrice;
+                        $sumTotal= $sumTotal +  $Total;
 
               ?>
                 <tr> 
@@ -91,8 +116,26 @@ include("../condb.php");
                 <td> <?=$row_pro['p_price'] ?> </td>
                 <td> <?=$_SESSION["strQty"][$i] ?> </td>
                 <td> <?=$sum?> </td>
+
+                
                 <td>
-                        <a href="order.php?id=<?=$row_pro['p_id']?>" class="btn btn-outline-primary" >+</a>
+                
+                <?php if(   $p_qty  > 1 &&    $_SESSION["strQty"][$i]  !=  $p_qty ){   ?>  
+                  
+                  
+                  <a href="order.php?id=<?=$row_pro['p_id']?>" class="btn btn-outline-primary" >+</a>
+                 
+                  
+                
+                  
+                 
+                  <?php    }else{  ?>
+
+                    <a   >สินค้าเหลือชิ้นสุดท้าย</a>
+                    <?php          } ?>
+                    
+                  
+                      
 
                       <?php if($_SESSION["strQty"][$i] > 1){   ?>  
                         <a href="order_del.php?id=<?=$row_pro['p_id']?>" class="btn btn-outline-danger">-</a>
@@ -113,7 +156,13 @@ include("../condb.php");
               }
         ?>
         <tr>
-            <td class="text-end" colspan="4" >ยอดชำระรวม</td>
+        <!-- <p>จำนวนสินค้ารวมที่ต้องการสั่งซื้อ  <?=  $sumTotal  ?>  ชิ้น </p> -->
+        <td class="text-end" colspan="4" >  <p>จำนวนสินค้าทั้งหมดที่ต้องการสั่งซื้อ </p> </td>
+        <td class="text-center"> <?=  $sumTotal  ?> </td>
+        <td> ชิ้น</td>
+
+
+            <td class="text-end" colspan="4" >  ยอดชำระรวม </td>
             <td class="text-center"><?=$sumPrice?> </td>
             <td>บาท</td>
 
@@ -124,39 +173,67 @@ include("../condb.php");
             
             </table>
 
-               
+               <!-- <p>จำนวนสินค้าที่ต้องการสั่งซื้อ  <?=  $sumTotal  ?>  ชิ้น </p> -->
                <div  style="text-align:right">   
             <a href="index.php" > 
             <button type="button" class="btn btn-outline-primary">เลือกสินค้าเพิ่ม</button> </a>
             
-            <button type="submit" class="btn btn-outline-success">ยืนยันการสั่งซื้อ</button> 
+            <!-- <button type="submit" class="btn btn-outline-success">ยืนยันการสั่งซื้อ</button>  -->
+
+        <?php   if($Total> 0){  ?> 
+         
+          <button type="submit" class="btn btn-outline-success"> ไปที่หน้าชำระเงินเพื่อยืนยันการสั่งซื้อ</button> 
+
+            <?php     }else{   ?>
+
+              <button  type="button"  class="btn btn-outline-success">กรุณาเลือกสินค้าก่อนยืนยันการสั่งซื้อ</button> 
+
+              <?php   }  ?>
+
+
+              <br>  
+
             </div> 
             
 
             </div>
 
 
+            
+            
             <div class="row">
-        <div class="col-md-6">
-
+        <div class="col-md-5">
+        <br>     
         <div class="alert alert-info"  h4  role="alert">
                 ข้อมูลการจัดส่งสินค้า
     </div>
 
-   
+    <h>  *ข้อมูลการจัดส่งสามารถแก้ไขได้*</h>
+   <br><br>
+
+  
+
+
+ 
+               
   
          ชื่อ-นามสกุล :
-    <div class="col-sm-7">
+    <div class="col-sm-5">
       <input type="text" name="m_name" required class="form-control" value="<?php echo $row['m_name'];?>">
     </div>
                
-    <br>
+    <br> 
+
+
+    <!-- <div class="my-div"> -->
       เบอร์โทร :
-    <div class="col-sm-6"> 
+    <div class="col-sm-6" > 
       <input type="text" name="m_tel" required class="form-control" value="<?php echo $row['m_tel'];?>">
     </div>
+    <!-- </div> -->
 
-    <br>
+
+    <br> 
 
   <div class="form-group">
     <div class="col-sm-0" align=""> ที่อยู่ : </div>
@@ -168,9 +245,7 @@ include("../condb.php");
 
         </div>
         </div>
-            
-    
-
+      
 
         </div> 
  </form>    
@@ -181,7 +256,7 @@ include("../condb.php");
 
 
 
-
+<br> <br> 
 
 
 </body>

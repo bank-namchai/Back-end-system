@@ -115,7 +115,7 @@ $result_t = mysqli_query($con, $sql2) or die ("Error in query: $sql " . mysqli_e
        <input type="hidden" name="p_img2" value="<?php echo $row['p_img'];?>">
       <input type="hidden" name="p_id" value="<?php echo $ID; ?>" />
       <button type="submit" class="btn btn-success">แก้ไขข้อมูล</button>
-      <a href="durable.php" class="btn btn-danger">ยกเลิก</a>
+      <a href="product.php" class="btn btn-danger">ยกเลิก</a>
     </div>
   </div>
 </form>

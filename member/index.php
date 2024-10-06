@@ -9,7 +9,8 @@ include("../condb.php");
  
 
 </head>
-<body>
+<body class="hold-transition skin-purple sidebar-mini">
+<!-- <body > -->
 <?php
   include('banner.php');
   ?>

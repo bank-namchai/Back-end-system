@@ -85,6 +85,7 @@ $row = mysqli_fetch_array($result);
 
 
   <div class="form-group" >
+
     <div class="col-sm-0 control-label">
       รูปภาพ :
     </div>
@@ -92,10 +93,13 @@ $row = mysqli_fetch_array($result);
       ภาพเก่า <br>
       <img src="../m_img/<?php echo $row['m_img'];?>" width="200px">
       
-      <input type="file" name="m_img"  class="form-control" accept="image/*" onchange="readURL(this);"/>
-      <img id="blah" src="#" alt="" width="250" class="img-rounded"/ style="margin-top: 10px;">
+      <input type="file" name="m_img"  class="form-control"  accept="image/*" onchange="readURL(this);" >
+      <img id="blah"  width="250" class="img-rounded" style="margin-top: 10px;"  >
     </div>
   </div>
+
+
+  
 
 
   <div class="form-group">
@@ -103,10 +107,20 @@ $row = mysqli_fetch_array($result);
     </div>
     <div class="col-sm-3">
       <input type="hidden" name="m_img2" value="<?php echo $row['m_img'];?>">
-      <input type="hidden" name="member_id" value="<?php echo $member_id; ?>" />
-      <button type="submit" class="btn btn-success">แก้ไขข้อมูล</button>
-      <a href="index.php" class="btn btn-danger">ยกเลิก</a>
+
+      <input type="hidden" name="member_id" value="<?php echo $member_id; ?>" />    
+
+
+
+  
     </div>
   </div>
+
+  <button type="button" class="btn btn-danger">ยกเลิก</button> </a>
+  <button type="submit" class="btn btn-success">แก้ไขข้อมูล</button>
+  <a href="index.php" > 
+     
+      
+      <br> <br> <br>
 
 </form>

@@ -40,7 +40,7 @@ $totalRows_typeprd = mysqli_num_rows($typeprd);
           <ul class="navbar-nav mr-auto">
             &nbsp;
             <div class="btn-group">
-              <a class="btn btn-Light" href="index.php?act=add" role="button">สมัครสมาชิก</a>
+              <a class="btn btn-Light" href="index.php?act=add" role="button">สมัครสมาชิกเพื่อซื้อสินค้า</a>
             </div>
             &nbsp;
             

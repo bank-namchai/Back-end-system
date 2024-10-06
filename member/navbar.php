@@ -46,7 +46,7 @@ $totalRows_typeprd = mysqli_num_rows($typeprd);
             
             <!-- แก้ไข  แก้ไข  แก้ไข  แก้ไข -->
 
-
+            <a class="btn btn-Light" href="cheack_order.php?act=add" role="button">  เช็คสถานะการสั่งซื้อ </a>
 
             <?php
             if ($member_id!='') {
